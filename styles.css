@@ -1,0 +1,129 @@
+:root {
+    --bg-grey: #E5E7EB;
+    --header-blue: #1E3A8A;
+    --nav-blue: #2563EB;
+    --tile-bg: #F3F4F6;
+    --text-dark: #1F2937;
+    --text-grey: #4B5563;
+    --border-grey: #D1D5DB;
+    --badge-red: #EF4444;
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bg-grey);
+    color: var(--text-dark);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--header-blue);
+    padding: 10px 20px;
+    color: white;
+    border-radius: 8px 8px 0 0;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: clamp(20px, 2vw, 24px);
+}
+
+.header .user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header .user-info a {
+    color: white;
+    text-decoration: underline;
+}
+
+.nav {
+    background-color: var(--nav-blue);
+    padding: 10px 20px;
+    display: flex;
+    gap: 15px;
+    border-bottom: 1px solid var(--border-grey);
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+.nav .badge {
+    background-color: var(--badge-red);
+    color: white;
+    border-radius: 12px;
+    padding: 2px 8px;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content h2 {
+    margin: 0 0 20px;
+    font-size: clamp(16px, 2vw, 20px);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+}
+
+.tile {
+    background-color: var(--tile-bg);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+
+    & i {
+        font-size: 24px;
+        color: var(--nav-blue);
+        margin-bottom: 10px;
+    }
+
+    & p {
+        margin: 0;
+        font-size: 14px;
+        color: var(--text-grey);
+    }
+
+    &:hover {
+        transform: scale(1.05);
+        background-color: var(--bg-grey);
+    }
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    font-size: 12px;
+    color: var(--text-grey);
+    border-top: 1px solid var(--border-grey);
+    margin-top: 20px;
+}
